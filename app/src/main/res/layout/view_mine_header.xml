@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/user_container"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <guru.maze.avatar.view.widget.CircleImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="@dimen/common_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:textSize="36dp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:id="@+id/all_points"
+            android:layout_marginTop="@dimen/base_margin"
+            tools:text="455"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/common_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/my_id_title"
+        app:layout_constraintTop_toBottomOf="@+id/user_container"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/base_margin"
+        android:textSize="16dp"
+        android:layout_marginTop="@dimen/common_margin"
+        android:textColor="@color/text_black"
+        android:text="@string/my_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/manage_id"
+        android:textColor="@color/base_purple"
+        app:layout_constraintTop_toTopOf="@+id/my_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/manage"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_id_recycler"
+        app:layout_constraintTop_toBottomOf="@+id/my_id_title"
+        android:layout_marginStart="@dimen/recycler_margin"
+        android:layout_marginEnd="@dimen/recycler_margin"
+        android:layout_marginTop="@dimen/_12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:id="@+id/my_digi_title"
+        app:layout_constraintTop_toBottomOf="@+id/my_id_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/base_margin"
+        android:textSize="16dp"
+        android:layout_marginTop="@dimen/common_margin"
+        android:textColor="@color/text_black"
+        android:text="@string/my_digi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/manage_digi"
+        android:textColor="@color/base_purple"
+        app:layout_constraintTop_toTopOf="@+id/my_digi_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/manage"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

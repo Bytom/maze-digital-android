@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:background="@drawable/shape_button_gradient"
+            android:gravity="center"
+            android:text="@string/continue_text"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/common_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_height="56dp"/>
+        <TextView
+            android:id="@+id/click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/common_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/click_num"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/click"
+            app:layout_constraintTop_toTopOf="@+id/click"
+            app:layout_constraintBottom_toBottomOf="@+id/click"
+            android:textColor="@color/base_juice"
+            android:text="1"
+            android:layout_margin="@dimen/base_margin"
+            android:gravity="center"
+            android:background="@drawable/shape_white_round"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_recy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/recycler_margin"
+        android:layout_marginEnd="@dimen/recycler_margin"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_container"
+        app:layout_constraintTop_toBottomOf="@+id/simple_title" />
+
+
+
+
+    <guru.maze.avatar.view.widget.SimpleTitle
+        android:id="@+id/simple_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

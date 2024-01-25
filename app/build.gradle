@@ -1,0 +1,164 @@
+plugins {
+    id 'com.android.application'
+    id 'com.jakewharton.butterknife'
+    id 'kotlin-android'
+    id 'org.greenrobot.greendao'
+
+}
+
+android {
+    namespace 'guru.maze.avatar'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "guru.maze.avatar"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions 'versionCode'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        resConfigs "en"
+    }
+
+//    signingConfigs {
+//        release {
+//            storeFile file("mazeai-keystore")
+//            storePassword "mazeai123a"
+//            keyAlias 'MazeAI'
+//            keyPassword "mazeai123a"
+//
+//
+//            v1SigningEnabled true //V1打包方式
+//            v2SigningEnabled true //V2打包方式
+//        }
+//    }
+
+    productFlavors{
+        Maze_Avatar {
+            applicationId "guru.maze.avatar"
+            resValue "string", "app_name", "Maze.Avatar"
+            buildConfigField "String", "Base_Url", '"https://maze.guru/maze-ai/"'
+//            buildConfigField "String", "Base_Url", '"http://test.maze.guru/maze-ai/"'
+//            buildConfigField "String", "Base_Url", '"https://aigc.maze.market/maze-ai/"'
+
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID : "trf7qfPmXp9202P5jEpq88",
+//                    GETUI_APP_KEY : "Yj6gfU44T07o8qVDhBELO8",
+//                    GETUI_APP_SECRET : "GtcbJS5TqGAh6PuWvIlQh5",
+//                    HUAWEI_APP_ID  : "107783101",
+//            ]
+        }
+
+
+
+    }
+    dexOptions {
+        jumboMode true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true //去掉无用的资源
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "${variant.productFlavors[0].name}-v${variant.versionName}.apk"
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs 'src/main/res'
+        }
+    }
+    greendao {
+
+        schemaVersion 1 //数据库版本号
+
+        daoPackage 'guru.maze.avatar.greendao.db'// 设置DaoMaster、DaoSession、Dao 包名
+//        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    //Retrofit
+    implementation'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation ('com.squareup.retrofit2:adapter-rxjava3:2.9.0'){
+        exclude group :'org.reactivestreams',module :'reactive-streams'
+    }
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // 内部引用了基础库和Android库，如果使用此库则无需再重复引用
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components:4.0.2'
+
+    implementation project(path: ':BRVAH')
+    implementation 'org.greenrobot:eventbus:3.3.1'
+
+    implementation project(path: ':picture-selector')
+    implementation project(path: ':ucrop')
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'
+    implementation ('com.qiniu:qiniu-android-sdk:8.3.0'){
+        exclude (group: 'com.squareup.okhttp3', module: 'okhttp')
+    }
+
+    // 图片压缩 (按需引入)
+    implementation ('io.github.lucksiege:compress:v3.11.1'){
+        exclude (group: 'com.squareup.okhttp3', module: 'okhttp')
+    }
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    //工具类
+    implementation ('com.blankj:utilcodex:1.31.1'){
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+        exclude group: 'androidx.annotation', module: 'annotation'
+    }
+
+    //图片加载器 Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //GreenDao
+    implementation 'org.greenrobot:greendao:3.3.0'
+
+
+    //集成google登录
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+
+    implementation 'com.github.getActivity:XXPermissions:18.5'
+
+
+}

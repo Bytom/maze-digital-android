@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MazeAvatar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <!-- Customize your theme here. -->  <item name="colorPrimary">@color/text_black</item>
+        <item name="colorPrimaryDark">@color/text_black</item>
+        <item name="colorAccent">@color/text_black</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">false</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert.Self</item>
+        <item name="android:activityOpenEnterAnimation">@anim/scale_in_pre</item>
+        <item name="android:activityOpenExitAnimation">@anim/scale_in_last</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.Dialog.Alert.Self" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <!--修改AlertDialog按钮的颜色-->
+        <item name="colorAccent">#3F51B5</item>
+    </style>
+</resources>

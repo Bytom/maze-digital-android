@@ -1,0 +1,5 @@
+rootProject.name = "Maze.Avatar"
+include ':app'
+include ':BRVAH'
+include ':ucrop'
+include ':picture-selector'

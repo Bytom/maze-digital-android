@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+
+
+    <color name="base_white">#FFFFFFFF</color>
+    <color name="base_red">#FF554A</color>
+    <color name="base_yellow">#FCA549</color>
+    <color name="base_green">#ff0dbf37</color>
+    <color name="base_juice">#FF5117</color>
+    <color name="base_blue">#035BD4</color>
+    <color name="light_juice">#aaFF5117</color>
+
+
+    <color name="gray_line">#FFFFFFFF</color>
+    <color name="gray_light">#3DACACB0</color>
+
+
+    <color name="text_black">#000000</color>
+    <color name="text_light">#AAAAAA</color>
+    <color name="common_text_light">#AAAAAA</color>
+    <color name="text_like">#C6C6C6</color>
+    <color name="text_blue">#1796FF</color>
+    <color name="text_purple">#FF1EA5</color>
+
+    <color name="bg_gray">#F3F3F3</color>
+    <color name="common_bg_gray">#F3F3F3</color>
+
+    <color name="common_line">#1C1C1C</color>
+    <color name="common_black">#000000</color>
+
+    <color name="press_bg">#E3E3E3</color>
+    <color name="common_bg">#89E3E3E3</color>
+    <color name="common_mask">#66000000</color>
+    <color name="trans_mask">#33000000</color>
+
+    <color name="common_white">#FFFFFFFF</color>
+
+    <color name="button_color">#FFFFFFFF</color>
+    <color name="mask_white">#ccFFFFFF</color>
+
+
+    <color name="base_purple">#FF1EA5</color>
+
+
+</resources>

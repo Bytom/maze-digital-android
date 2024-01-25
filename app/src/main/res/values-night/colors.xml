@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="transparent">#00000000</color>
+
+
+    <color name="base_white">#000000</color>
+    <color name="base_red">#FF554A</color>
+    <color name="base_yellow">#FCA549</color>
+    <color name="base_green">#ff0dbf37</color>
+    <color name="base_juice">#FF5117</color>
+    <color name="base_blue">#035BD4</color>
+    <color name="light_juice">#aaFF5117</color>
+
+
+    <color name="gray_line">#000000</color>
+    <color name="gray_light">#3DACACB0</color>
+
+
+    <color name="text_black">#FFFFFF</color>
+    <color name="text_light">#717171</color>
+
+    <color name="text_like">#C6C6C6</color>
+
+    <color name="bg_gray">#1C1C1C</color>
+
+
+    <color name="press_bg">#000000</color>
+
+
+    <color name="button_color">#1C1C1C</color>
+
+
+</resources>

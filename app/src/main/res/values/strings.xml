@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name_n">Maze.Avatar</string>
+
+    <string name="quit_again">Press To Quit Again</string>
+    <string name="continue_text">Continue</string>
+    <string name="i_am">I’m...</string>
+    <string name="i_want_to_be">I want to be...</string>
+    <string name="choose_at_least_one">Select at least one</string>
+    <string name="cancel">Cancel</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="upgrade_dialog_desc">This feature can only be used  by subscribed members</string>
+    <string name="good_photo_ex_title">Good Photo Examples</string>
+    <string name="bad_photo_ex_title">Bad Photo Examples</string>
+    <string name="bad_photo_ex_">Group shots, glasses, busy background, blurred face</string>
+    <string name="good_photo_ex_">Close-up or half-body selfies, clean background, facial expressions</string>
+    <string name="upload_pic_desc">Support picture format: JPG/PNG \nMax: 10MB</string>
+    <string name="create_digital_tips">Photos will be automatically destroyed from our server when the image is completed</string>
+    <string name="upload_one_photo">Upload One Photo</string>
+    <string name="points">points</string>
+    <string name="upload_from_local_device">Upload From Local Device</string>
+    <string name="take_a_photo">Take a Photo</string>
+    <string name="loading">Loading…</string>
+    <string name="hide">Hide</string>
+    <string name="take_few_min">It may take a few minutes.</string>
+    <string name="digital_completed">Your digital humans are completed!</string>
+    <string name="create_your_digital_human">Create\nYour \nDigital Human</string>
+    <string name="run_in_bg">Run in background</string>
+    <string name="go_to_gallrty">Go to Gallery</string>
+    <string name="gender">Gender</string>
+    <string name="select_create">Select Creation</string>
+    <string name="download">Download</string>
+
+    <string name="style">Style</string>
+    <string name="digital_human">Digital Human</string>
+    <string name="permission_rationale_message">You have denied authorization, please agree to the authorization, or the function will not work properly!</string>
+    <string name="permission_denied_forever_message">We need some permissions that you have already denied. Please authorize manually, otherwise the function will not work properly!</string>
+    <string name="success">Success</string>
+    <string name="need_login">You need to Sign in</string>
+    <string name="login_google">Sign in with Google</string>
+    <string name="login_chuanyin">Sign in with ChuanYin</string>
+
+    <string name="login_policy1">By signing up or logging in, you accept our </string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="and">and</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="my_id">My ID</string>
+    <string name="manage">Manage</string>
+    <string name="login_out">Login Out</string>
+
+    <string name="user_name">User name</string>
+    <string name="account_info">Account Info</string>
+    <string name="policy">Policy</string>
+    <string name="FAQ">FAQ</string>
+    <string name="about_us">About us</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="settings">Settings</string>
+    <string name="switch_2_night">Switch to Night Mode</string>
+    <string name="switch_2_day">Switch to Light Mode</string>
+    <string name="google">Google</string>
+    <string name="bind">bind</string>
+    <string name="user_policy">User Policy</string>
+    <string name="check_update">Check Update</string>
+    <string name="building">Building</string>
+
+    <string name="no_data">No data</string>
+    <string name="my_digi">My DIGI</string>
+    <string name="get_start">Get Started</string>
+    <string name="popular_style">Popular Style</string>
+
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <guru.maze.avatar.view.widget.SimpleTitle
+        android:id="@+id/simple_title"
+        app:title="@string/upload_one_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/digital_progress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/digital_progress"
+        android:layout_marginTop="@dimen/half_common_margin"
+        android:id="@+id/progress_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/take_few_min"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/common_margin"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tips"
+        android:textSize="@dimen/_10dp"
+        android:textColor="@color/text_light"
+        android:text="@string/create_digital_tips"
+        android:gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80dp"
+        android:background="@color/base_white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/nav_height"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:background="@drawable/shape_button_juice"
+            android:elevation="@dimen/_2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/cost_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6dp"
+                android:text="@string/run_in_bg"
+                android:textColor="@color/common_white"
+                android:textSize="@dimen/common_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
